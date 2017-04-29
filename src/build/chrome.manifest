@@ -1,0 +1,9 @@
+content notificationtest jar:chrome/notificationtest.jar!/chrome/content/
+
+overlay chrome://messenger/content/messenger.xul chrome://notificationtest/content/messenger.xul
+
+component {152c7910-5c0a-11e1-b86c-0800200c9a66} components/NotificationIconService.js
+contract @eigenco.de/notificationiconservice;1 {152c7910-5c0a-11e1-b86c-0800200c9a66}
+
+locale notificationtest en-US jar:chrome/notificationtest.jar!/chrome/locale/en-US/
+skin notificationtest classic/1.0 jar:chrome/notificationtest.jar!/chrome/skin/

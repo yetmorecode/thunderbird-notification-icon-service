@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<overlay id="statusbar" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  
+  <script type="application/x-javascript">
+    var Test = {
+        show : function() {
+            var notification = Components.classes["@eigenco.de/notificationiconservice;1"].getService().wrappedJSObject;
+            notification.showNotificationIcon();
+        },
+    
+        hide : function() {
+            var notification = Components.classes["@eigenco.de/notificationiconservice;1"].getService().wrappedJSObject;
+            notification.hideNotificationIcon();
+        }   
+    };
+  </script>
+  <menupopup id="taskPopup">
+    <menu label="Notification Test">
+        <menupopup>
+            <menuitem label="Show" oncommand="Test.show();" />
+            <menuitem label="Hide" oncommand="Test.hide();" />
+        </menupopup>
+    </menu>
+  </menupopup>
+</overlay>
